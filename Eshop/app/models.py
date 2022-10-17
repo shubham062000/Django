@@ -47,7 +47,7 @@ class Customer(models.Model):
     
 class Products(models.Model):
     name = models.CharField(max_length=60)
-    price= models.IntegerField(default=0)
+    price= models.FloatField(default=0)
     category= models.ForeignKey(Category,on_delete=models.CASCADE,default=1 )
     description= models.TextField()
     image= models.ImageField(upload_to='images/')
